@@ -19,7 +19,8 @@ if __name__ == '__main__':
                 data = response.json()
                 products.extend(data["products"])
                 productsRetrieved += data["count"]
-
+                
+                # checks if it has collected all the products in this price range.
                 if productsRetrieved == data["total"]:
                     productsRetrieved = 0
                     params["minPrice"] += 10000
