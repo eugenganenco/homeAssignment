@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
     with requests.Session() as session:
         while params['maxPrice'] <= 100000:
-            # I assume every request returns a different list of products. You can find the explanation in the Readme file.
+            # I assume every request returns a different list of products. You can find the explanation for this inside the Readme file.
             response = session.get(url, params=params)
 
             if response.status_code == 200:
